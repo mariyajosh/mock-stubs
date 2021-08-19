@@ -10,10 +10,7 @@ import io.mockk.verify
 
 
 class AutoTellerMachineTest: StringSpec({
-
-
     val atm=AutoTellerMachine(FakePrinter(),FakeBankService())
-
     "should print a receipt if money is withdrawn successfully" {
         atm.withdraw(1000)
         FakePrinter.message shouldBe "WithDraw Successfully"
@@ -33,11 +30,10 @@ class AutoTellerMachineTest: StringSpec({
     "should throw the exception when withdrawing the money which is greater than Bank balance2 "{
         val atm2=AutoTellerMachine(FakePrinter(), FakeBankService2(false))
         atm2.withdraw(100000)
-        FakePrinter.message shouldBe "WithDraw failed"
+        FakePrinter.message shouldBe "failed"
     }
-    val f= mockk<Printer>()
-    val fbs= mockk<BankingService>()
-    val atm2=AutoTellerMachine(FakePrinter(),FakeBankService())
+
+
 
 
 })

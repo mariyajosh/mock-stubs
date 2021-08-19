@@ -1,4 +1,6 @@
 package com.example
 
-class WithDrawnException {
+import java.lang.Exception
+
+class WithDrawnException():Exception(){
 }

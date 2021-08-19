@@ -1,6 +1,6 @@
 package com.example
 
-class FakePrinter: Printer {
+ class FakePrinter: Printer {
     companion object{
         var message =""
     }
