@@ -30,7 +30,7 @@ class AutoTellerMachineTest: StringSpec({
     "should throw the exception when withdrawing the money which is greater than Bank balance2 "{
         val atm2=AutoTellerMachine(FakePrinter(), FakeBankService2(false))
         atm2.withdraw(100000)
-        FakePrinter.message shouldBe "failed"
+        FakePrinter.message shouldBe "WithDraw failed"
     }
 
 
